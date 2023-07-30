@@ -1,11 +1,9 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "books")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,10 +11,26 @@ public class Book {
 
     private String title;
 
-    private String author;
+    @Column(name = "user_id")
+    private Long userId;
 
-    private String has_paperback;
+    @Column(name = "has_paperback")
+    private Boolean hasPaperback;
 
+    private String status;
+
+    public Book() {
+
+    }
+
+    public Book(String title, Long userId, Boolean hasPaperback, String status) {
+        this.title = title;
+        this.userId = userId;
+        this.hasPaperback = hasPaperback;
+        this.status = status;
+    }
+
+    // gets and sets
     public Long getId() {
         return id;
     }
@@ -33,11 +47,27 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Boolean getHasPaperback() {
+        return hasPaperback;
+    }
+
+    public void setHasPaperback(Boolean hasPaperback) {
+        this.hasPaperback = hasPaperback;
     }
 }

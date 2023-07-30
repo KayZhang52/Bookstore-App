@@ -26,7 +26,15 @@ public class Role {
         return id;
     }
 
+    public void setId() {
+        return;
+    }
+
     public ERole getName() {
         return name;
+    }
+
+    public void setName() {
+        return;
     }
 }

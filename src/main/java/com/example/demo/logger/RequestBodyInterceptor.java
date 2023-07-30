@@ -1,3 +1,5 @@
+package com.example.demo.logger;
+
 import com.example.demo.service.LoggingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
