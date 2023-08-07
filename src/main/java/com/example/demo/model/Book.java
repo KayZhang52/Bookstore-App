@@ -11,11 +11,18 @@ public class Book {
 
     private String title;
 
-    @Column(name = "user_id")
+    @Column(name = "author_user_id")
     private Long userId;
+
+    private String author;
 
     @Column(name = "has_paperback")
     private Boolean hasPaperback;
+
+    private int rating;
+
+    @Column(name = "img_location")
+    private String imgLocation;
 
     private String status;
 
@@ -55,12 +62,12 @@ public class Book {
         this.userId = userId;
     }
 
-    public String getStatus() {
-        return status;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public Boolean getHasPaperback() {
@@ -70,4 +77,29 @@ public class Book {
     public void setHasPaperback(Boolean hasPaperback) {
         this.hasPaperback = hasPaperback;
     }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getImgLocation() {
+        return imgLocation;
+    }
+
+    public void setImageLocation(String imgLocation) {
+        this.imgLocation = imgLocation;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }
